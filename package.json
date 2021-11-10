@@ -1,6 +1,6 @@
 {
   "name": "mapbox-gl-draw-rounded-circle",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A module to draw a circle using mapbox-gl-draw",
   "main": "./index.js",
   "scripts": {
