@@ -51,6 +51,21 @@ describe('DragCircleMode', function () {
     DragCircleMode.changeMode.mockClear();
   });
 
+  const state = {
+    polygon: {
+      properties: {
+        center: []
+      }
+    }
+  };
+
+  const e = {
+    lngLat: {
+      lat: 1,
+      lng: 2
+    }
+  };
+
   it('should setup state with a polygon', () => {
     DragCircleMode.newFeature.mockReturnValue(mockFeature);
     expect(DragCircleMode.onSetup({})).toEqual({
@@ -70,26 +85,16 @@ describe('DragCircleMode', function () {
     expect(doubleClickZoom.disable).toHaveBeenCalled();
   });
 
-  it('should disable dragPan on setup', function () {
-    DragCircleMode.onSetup({});
+  it('should disable dragPan on drag', function () {
+    DragCircleMode.onDrag(state, e);
+    expect(dragPan.disable).toHaveBeenCalled();
+  });
+  it('should disable dragPan on mouse move', function () {
+    DragCircleMode.onMouseMove(state, e);
     expect(dragPan.disable).toHaveBeenCalled();
   });
 
   it('should update the center when onMouseDown is fired', function () {
-    const state = {
-      polygon: {
-        properties: {
-          center: []
-        }
-      }
-    };
-
-    const e = {
-      lngLat: {
-        lat: 1,
-        lng: 2
-      }
-    };
     DragCircleMode.onMouseDown(state, e);
     expect(state).toEqual({
       polygon: {
@@ -188,13 +193,19 @@ describe('DragCircleMode', function () {
   it('should should set active state and display features', function () {
     const state = {
       polygon: {
-        id: 'test-id'
+        id: 'test-id',
+        properties:{
+          center: [[], []]
+        }
       }
     };
 
     const geojson = {
       properties: {
         id: 'test-id'
+      },
+      geometry:{
+        coordinates: [[[1,1], [1,1]]]
       }
     };
 
