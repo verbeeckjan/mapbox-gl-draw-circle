@@ -2,7 +2,7 @@
   "name": "mapbox-gl-draw-rounded-circle",
   "version": "2.0.0",
   "description": "A module to draw a circle using mapbox-gl-draw",
-  "main": "index",
+  "main": "./index.js",
   "scripts": {
     "test": "jest --all",
     "coverage": "jest --all --coverage"
@@ -14,6 +14,7 @@
     "mapbox",
     "draw"
   ],
+  "types": "./index.d.ts",
   "author": "Anvesh Kumar Arrabochu",
   "license": "MIT",
   "dependencies": {
@@ -29,6 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrTwisterAnastasia/mapbox-gl-draw-circle"
+    "url": "git+https://github.com/MrTwisterAnastasia/mapbox-gl-draw-circle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrTwisterAnastasia/mapbox-gl-draw-circle/issues"
+  },
+  "homepage": "https://github.com/MrTwisterAnastasia/mapbox-gl-draw-circle#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
