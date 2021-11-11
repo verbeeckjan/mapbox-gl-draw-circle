@@ -1,17 +1,9 @@
 # mapbox-gl-draw-rounded-circle
 
-Adds support for drawing and editing a circle feature using [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) library.
+We have forked the custom draw circle mode to fix the issues and add some features (see Changelog below):
 
-
-
-## Demo
-
-##### Circle mode
-![Circle Mode Demo](demo/CircleModeDemo.gif)
-
-##### Drag Circle mode
-![Drag Circle Mode Demo](demo/DragCircleDemo.gif)
-
+* forked repo on Github: https://github.com/iamanvesh/mapbox-gl-draw-circle
+* published package on NPM: https://www.npmjs.com/package/mapbox-gl-draw-circle
 
 ## Usage
 
@@ -83,4 +75,4 @@ Sample feature object returned in `draw.create` event
 * Fixed the issue with an exception thrown when center coordinates are missing.
 * Fixed the issue with dragPan handler staying disabled when the draw control is removed from map.
 * Fixed the issue with the circle points not being strictly at 12, 3, 6, 9 o'clock.
-* Add the center point to the circle in edit and drag mode: Orange dot with a white border in edit mode.
+* Add the center point to the circle in edit and drag mode: Orange dot with a white border.
