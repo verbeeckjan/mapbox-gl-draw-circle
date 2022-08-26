@@ -1,6 +1,6 @@
-declare module 'mapbox-gl-draw-rounded-circle' {
-    export const CircleMode: object;
-    export const DragCircleMode: object;
-    export const DirectMode: object;
-    export const SimpleSelectMode: object;
-}
+import { DrawCustomMode } from '@mapbox/mapbox-gl-draw';
+
+export const CircleMode: DrawCustomMode;
+export const DragCircleMode: DrawCustomMode;
+export const DirectMode: DrawCustomMode;
+export const SimpleSelectMode: DrawCustomMode;

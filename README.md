@@ -3,7 +3,7 @@
 We have forked the custom draw circle mode to fix the issues and add some features (see Changelog below):
 
 * forked repo on Github: https://github.com/iamanvesh/mapbox-gl-draw-circle
-* published package on NPM: https://www.npmjs.com/package/mapbox-gl-draw-circle
+* published package on NPM: https://www.npmjs.com/package/mapbox-gl-draw-rounded-circle
 
 ## Usage
 
@@ -69,6 +69,10 @@ Sample feature object returned in `draw.create` event
 ```
 
 ## Changelog
+
+### v2.1.0
+
+* Upgraded @mapbox/mapbox-gl-draw to ^1.3.0
 
 ### v2.0.0
 
