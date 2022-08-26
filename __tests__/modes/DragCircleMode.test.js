@@ -1,6 +1,7 @@
 jest.mock('@mapbox/mapbox-gl-draw/src/lib/double_click_zoom', () => ({
-  enable: jest.fn(),
-  disable: jest.fn()
+  default: {
+    enable: jest.fn(), disable: jest.fn()
+  }
 }));
 
 jest.mock('@turf/circle', () => ({
@@ -12,8 +13,7 @@ jest.mock('@turf/distance', () => ({
 }));
 
 jest.mock('../../lib/utils/drag_pan', () => ({
-  enable: jest.fn(),
-  disable: jest.fn()
+  enable: jest.fn(), disable: jest.fn()
 }));
 
 let DragCircleMode = require('../../lib/modes/DragCircleMode');
@@ -25,7 +25,7 @@ const mockFeature = {
     "coordinates": []
   }
 };
-const doubleClickZoom = require('@mapbox/mapbox-gl-draw/src/lib/double_click_zoom');
+const doubleClickZoom = require('@mapbox/mapbox-gl-draw/src/lib/double_click_zoom').default;
 const Constants = require('@mapbox/mapbox-gl-draw/src/constants');
 const circle = require('@turf/circle');
 const dragPan = require('../../lib/utils/drag_pan');

@@ -1,4 +1,4 @@
-jest.mock('@mapbox/mapbox-gl-draw/src/lib/create_vertex');
+jest.mock('@mapbox/mapbox-gl-draw/src/lib/create_vertex', ()=>jest.fn());
 jest.mock('../../lib/utils/get_cardinal_direction_points', ()=>jest.fn());
 jest.mock('../../lib/utils/get_center_point_for_circle', ()=>jest.fn());
 
